@@ -1,0 +1,20 @@
+service: rock-scissor-paper-game-sls
+
+frameworkVersion: "3"
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: us-east-1
+ 
+functions:
+  play-rock-scissor-paper:
+    handler: src/lambdas/play-rock-scissor-paper.handler
+    events:
+      - http:
+          path: play/{gambitPlayer}
+          method: get

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "serverless offline start --reloadHandler",
+    "deploy": "serverless deploy --aws-profile=personal",
+    "destroy": "serverless remove --aws-profile=personal"
+  },
+  "devDependencies": {
+    "serverless-offline": "13.8.0"
+  }
+}
